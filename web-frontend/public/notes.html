@@ -12,21 +12,24 @@
 <body>
 
 
-<h1 id="notesHeader">Enter your notes separated by tabs</h1>
+<h1 id="notesHeader">Enter your notes in the form.</h1>
 
 <form class="form-horizontal">
     <fieldset>
 
         <!-- Form Name -->
-        <legend>Form Name</legend>
+        <legend>Symptom input form</legend>
 
         <!-- Select Basic -->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="selectbasic">Select Body Part</label>
+            <label class="col-md-4 control-label" for="bodypart">Select Body Part</label>
             <div class="col-md-4">
-                <select id="selectbasic" name="selectbasic" class="form-control">
-                    <option value="1">Head</option>
-                    <option value="2">Torso</option>
+                <select id="bodypart" name="selectbasic" class="form-control">
+                    <option value="head">Head</option>
+                    <option value="torso">Torso</option>
+                    <option value="chest">Chest</option>
+                    <option value="neck">Neck</option>
+                    <option value="leg">Legs</option>
                 </select>
             </div>
         </div>
@@ -35,10 +38,54 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="textinput">Symptom Name</label>
             <div class="col-md-4">
-                <input id="textinput" name="textinput" type="text" placeholder="placeholder"
+                <input id="textinput" name="textinput" type="text" placeholder="e.g Baggy eyes"
                        class="form-control input-md">
             </div>
         </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="symptomDescription">Symptom Description</label>
+            <div class="col-md-4">
+                <textarea id="symptomDescription" name="symptomdescription"
+                          placeholder="e.g Baggy eyes look very baggy indeed"
+                       class="form-control input-md">
+                    </textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label">Symptom Severity</label>
+            <div class="col-md-4">
+                <div class="radio">
+                    <label for="radios-0">
+                        <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+                        Mild
+                    </label>
+                </div>
+                <div class="radio">
+                    <label for="radios-1">
+                        <input type="radio" name="radios" id="radios-1" value="2">
+                        Medium
+                    </label>
+                </div>
+                <div class="radio">
+                    <label for="radios-2">
+                        <input type="radio" name="radios" id="radios-2" value="2">
+                        Severe
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Button -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="savebutton"></label>
+            <div class="col-md-6">
+                <button id="savebutton" name="singlebutton" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+
+
 
     </fieldset>
 </form>
