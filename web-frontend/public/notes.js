@@ -9,8 +9,28 @@ window.onload = function(){
     $("#savebutton").click( function(e){
         e.preventDefault();
         console.log("clicked save button");
-        let obj={};
-        console.log($('#bodypart').val());
+        let entry={};
+        entry.bodyDiagram;
+        entry.bodyPart=($('#bodypart').val());
+        entry.symptom = $('#symptomName').val();
+        entry.description = $('#symptomDescription').val();
+        var radios = document.getElementsByTagName('input');
+        var value;
+        for (var i = 0; i < radios.length; i++) {
+            if (radios[i].type === 'radio' && radios[i].checked) {
+                value = radios[i].value;
+            }
+        }
+
+        entry.severity = value;
+
+        /*
+        TODO:
+        This still needs to have an id attached to a symptom, which can be done
+        through the database itself.
+         */
+        console.log(entry);
+
     })
 
 }
