@@ -22,6 +22,21 @@
 
         <!-- Select Basic -->
         <div class="form-group">
+            <label class="col-md-4 control-label" for="type">Select Item Type</label>
+            <div class="col-md-4">
+                <select id="type" name="selectbasic" class="form-control">
+                    <option value="Root">Root</option>
+                    <option value="Symptom">Symptom</option>
+                    <option value="Body Part">Body Part</option>
+                    <option value="Action">Action</option>
+                    <option value="Question">Question</option>
+                    <option value="Body Diagram">Body Diagram</option>
+                </select>
+            </div>
+        </div>
+
+        <!--
+        <div class="form-group">
             <label class="col-md-4 control-label" for="bodypart">Select Body Part</label>
             <div class="col-md-4">
                 <select id="bodypart" name="selectbasic" class="form-control">
@@ -33,10 +48,12 @@
                 </select>
             </div>
         </div>
+        -->
+
 
         <!-- Text input-->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="symptomName">Symptom Name</label>
+            <label class="col-md-4 control-label" for="symptomName">Title</label>
             <div class="col-md-4">
                 <input id="symptomName" name="textinput" type="text" placeholder="e.g Baggy eyes"
                        class="form-control input-md">
@@ -44,7 +61,7 @@
         </div>
 
         <div class="form-group">
-            <label class="col-md-4 control-label" for="symptomDescription">Symptom Description</label>
+            <label class="col-md-4 control-label" for="symptomDescription">Description</label>
             <div class="col-md-4">
                 <textarea id="symptomDescription" name="symptomdescription"
                           placeholder="e.g Baggy eyes look very baggy indeed"
@@ -53,6 +70,28 @@
             </div>
         </div>
 
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="options">Options</label>
+            <div class="col-md-4">
+                <textarea id="options" name="options"
+                          placeholder="Add options here (optional)"
+                          class="form-control input-md">
+                    </textarea>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="image">Image Link</label>
+            <div class="col-md-4">
+                <textarea id="image" name="image"
+                          placeholder="www.imgur.com/htsHSk"
+                          class="form-control input-md">
+                    </textarea>
+            </div>
+        </div>
+
+        <!--
         <div class="form-group">
             <label class="col-md-4 control-label">Symptom Severity</label>
             <div class="col-md-4">
@@ -76,12 +115,14 @@
                 </div>
             </div>
         </div>
+        -->
 
         <!-- Button -->
         <div class="form-group">
             <label class="col-md-4 control-label" for="savebutton"></label>
             <div class="col-md-6">
                 <button id="savebutton" name="singlebutton" class="btn btn-primary">Save</button>
+                <button id="nextItem" name="nextItem" class="btn btn-info">Add next items</button>
             </div>
         </div>
 

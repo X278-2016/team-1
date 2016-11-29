@@ -6,6 +6,13 @@ console.log("page is up and running");
 window.onload = function(){
     // prevents default behavior
    let save = document.getElementById("savebutton");
+
+
+   $("#type").change(function(){
+       console.log("changed");
+   }) ;
+
+
     $("#savebutton").click( function(e){
         e.preventDefault();
         console.log("clicked save button");
