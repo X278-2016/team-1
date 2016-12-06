@@ -28,23 +28,22 @@ console.log("server is up and running");
 
 let symptom = [];
 // Handle POST to create a new symptom
-app.post('/v1/bodypart', function(req, res) {
+app.post('/v1/symptom', function(req, res) {
     let data = req.body;
     if (!data ||
-        !data.bodypart ||
-        !data.symptom ||
-        !data.description ||
-        !data.severity) {
+        !data.bodyPart ||
+        !data.title ||
+        !data.description) {
         res.status(400).send({ error: 'all form fields required' });
     } else {
-        let newSymptom = _.pick(data, 'bodypart', 'symptom', 'description', 'severity');
+        let newSymptom = _.pick(data, 'bodyPart', 'title', 'description', 'images', 'options');
         newSymptom = _.extend(newSymptom, {
-            id: Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5),
+            id: Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 10),
             //duration: Math.floor(Math.random() * 500),
             //winner: '',
             //points: Math.floor(Math.random() * 100)
         });
-        symptom.push(newSymptom);
+        console.log(newSymptom);
         res.status(201).send({
             symptomID: newSymptom.id
         });
